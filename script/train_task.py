@@ -41,11 +41,6 @@ def train_validate_loop(train_task, validate_task, log_path):
     criterion = nn.NLLLoss()
     epoch = 1
 
-    input = torch.randn(3, 5, requires_grad=True)
-    target = torch.empty(3, dtype=torch.long).random_(5)
-
-    print(input, target)
-
     while True:
         print("TRAIN (" + str(epoch-1) + "-" + str(epoch) + "): ", end="")
         train_loss = train(train_task, criterion)
