@@ -1,0 +1,35 @@
+path:
+    corpus: "corpus/"
+    save: "save/"
+
+data_split:
+    train: 6
+    validate: 2
+    test: 2
+
+model_param:
+    - 4
+    - 3
+    - 3
+    - 3
+
+train:
+    corpus_name:
+        input: "train_input"
+        target: "train_target"
+    model_name: "model"
+    learning_rate: 0.0001
+    log_name: "loss"
+
+validate:
+    corpus_name:
+        input: "validate_input"
+        target: "validate_target"
+    interval: 1
+
+test:
+    corpus_name:
+        input: "test_input"
+        target: "test_target"
+    model_name: "model"
+    log_name: "eval"
